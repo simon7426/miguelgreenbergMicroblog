@@ -1,0 +1,107 @@
+2021-07-28 12:00:33,778 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 12:01:01,732 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 12:01:24,979 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 12:33:16,448 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 12:46:43,607 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 12:54:42,636 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 12:57:45,355 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 13:12:47,187 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 13:13:15,387 ERROR: Exception on /follow/rian [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\routes.py", line 114, in follow
+    return redirect(url_for('user',username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'register' instead?
+2021-07-28 13:14:19,360 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:46]
+2021-07-28 13:14:46,611 ERROR: Exception on /unfollow/rian [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\routes.py", line 133, in unfollow
+    return redirect(url_for('user', username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'register' instead?
+2021-07-28 13:15:55,870 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:30]
+2021-07-28 13:16:20,275 ERROR: Exception on /follow/rian [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\routes.py", line 114, in follow
+    return redirect(url_for('user',username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'register' instead?
+2021-07-28 13:19:27,371 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:30]
+2021-07-28 13:48:55,464 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:30]
+2021-07-28 13:53:38,989 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:30]
+2021-07-28 13:56:39,335 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:30]
+2021-07-28 15:09:45,033 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:30]
+2021-07-28 15:14:23,821 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:32]
+2021-07-28 16:12:53,248 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:32]
+2021-07-28 16:17:32,253 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:32]
+2021-07-28 16:24:38,429 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:34]
+2021-07-28 16:27:09,118 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:34]

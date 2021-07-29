@@ -1,0 +1,107 @@
+2021-07-28 16:27:12,558 ERROR: Exception on /index [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\routes.py", line 32, in index
+    return render_template('index.html',posts=posts.items,title="Home Page",form=form,next_url=next_url,prev_url=prev_url)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "G:\Intercloud\flask\microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "G:\Intercloud\flask\microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "G:\Intercloud\flask\microblog\app\templates\base.html", line 24, in block "content"
+    {% block app_content %}{% endblock %}
+  File "G:\Intercloud\flask\microblog\app\templates\index.html", line 19, in block "app_content"
+    {% include '_post.html' %}
+  File "G:\Intercloud\flask\microblog\app\templates\_post.html", line 4, in top-level template code
+    <a href="{{ url_for('user', username=post.author.username) }}">
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'user' with values ['username']. Did you mean 'register' instead?
+2021-07-28 16:28:01,656 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:34]
+2021-07-28 16:38:04,675 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:36]
+2021-07-29 10:41:57,728 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:40]
+2021-07-29 10:42:05,366 ERROR: Exception on /favicon.ico [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "G:\Intercloud\flask\microblog\app\errors.py", line 6, in not_found_error
+    return render_template('404.html'),404
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "g:\intercloud\flask\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "G:\Intercloud\flask\microblog\app\templates\404.html", line 4, in template
+    <h1>{{ _(File Not Found) }}</h1>
+jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'Not'
+2021-07-29 10:43:58,664 INFO: Microblog Startup [in G:\Intercloud\flask\microblog\app\__init__.py:40]
