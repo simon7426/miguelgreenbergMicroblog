@@ -1,19 +1,17 @@
-from operator import sub
-from flask import Flask,request,current_app
 from config import Config
-import logging
-from logging.handlers import SMTPHandler, RotatingFileHandler
-import os
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from flask_mail import Mail
-
-from flask_login import LoginManager
-from flask_bootstrap import Bootstrap
-from flask_moment import Moment
+from elasticsearch import Elasticsearch
+from flask import Flask,request,current_app
 from flask_babel import Babel
 from flask_babel import lazy_gettext as _l
-from elasticsearch import Elasticsearch
+from flask_bootstrap import Bootstrap
+from flask_login import LoginManager
+from flask_mail import Mail
+from flask_migrate import Migrate
+from flask_moment import Moment
+from flask_sqlalchemy import SQLAlchemy
+from logging.handlers import SMTPHandler, RotatingFileHandler
+import logging
+import os
 
 db = SQLAlchemy()
 migrate = Migrate()
