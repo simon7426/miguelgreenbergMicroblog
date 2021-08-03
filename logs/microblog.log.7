@@ -1,0 +1,128 @@
+2021-08-01 11:39:48,060 ERROR: Exception on /follow/rainmaker [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\main\routes.py", line 113, in follow
+    return redirect(url_for('main.user', username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user' with values ['username']. Did you mean 'main.search' instead?
+2021-08-01 11:41:48,318 ERROR: Exception on /unfollow/rainmaker [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\main\routes.py", line 133, in unfollow
+    return redirect(url_for('main.user', username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user' with values ['username']. Did you mean 'main.search' instead?
+2021-08-01 11:41:48,318 ERROR: Exception on /unfollow/rainmaker [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\main\routes.py", line 133, in unfollow
+    return redirect(url_for('main.user', username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user' with values ['username']. Did you mean 'main.search' instead?
+2021-08-01 11:43:03,957 ERROR: Exception on /follow/rainmaker [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\main\routes.py", line 113, in follow
+    return redirect(url_for('main.profile', username=username))
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "g:\intercloud\flask\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "g:\intercloud\flask\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.user' with values ['username']. Did you mean 'main.search' instead?
+2021-08-01 12:00:14,300 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 12:00:14,300 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 12:23:42,064 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 12:23:42,064 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 12:23:50,551 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 12:23:50,551 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:07:01,207 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:07:01,207 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:16:25,289 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:16:25,289 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:18:44,351 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:18:44,351 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]

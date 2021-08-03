@@ -1,4 +1,4 @@
-2021-08-02 12:32:23,752 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+2021-08-01 13:19:10,657 ERROR: Exception on /send_message/rian [POST] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,12 +12,28 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 176, in decorated
-    return f(*args, **kwargs)
-  File "G:\Intercloud\flask\microblog\app\api\tokens.py", line 16, in revoke_token
-    token_auth.current_user.revoke_token()
-AttributeError: 'function' object has no attribute 'revoke_token'
-2021-08-02 12:33:23,737 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+  File "g:\intercloud\flask\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "G:\Intercloud\flask\microblog\app\main\routes.py", line 166, in send_message
+    msg = Message(author=current_user,recipient=user,body=form.message.data)
+AttributeError: 'MessageForm' object has no attribute 'message'
+2021-08-01 13:21:01,002 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:21:01,002 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:21:08,493 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:21:08,493 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:21:25,406 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:21:25,406 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:34:02,732 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:34:02,732 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:34:10,814 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:34:10,814 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:49:17,527 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:49:17,527 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:59:29,774 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 13:59:29,774 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:96]
+2021-08-01 16:39:18,113 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:99]
+2021-08-01 16:39:18,113 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:99]
+2021-08-01 16:39:46,164 ERROR: Exception on /api/users/1 [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -31,16 +47,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 161, in decorated
-    user = self.authenticate(auth, password)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 366, in authenticate
-    return self.verify_token_callback(token)
-  File "G:\Intercloud\flask\microblog\app\api\auth.py", line 20, in verify_token
-    return User.check_token(token) if token else None
-  File "G:\Intercloud\flask\microblog\app\models.py", line 204, in check_token
-    if(User is None or user.token_expiration < datetime.utcnow()):
-AttributeError: 'NoneType' object has no attribute 'token_expiration'
-2021-08-02 12:33:23,737 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+TypeError: get_user() got an unexpected keyword argument 'id'
+2021-08-01 16:39:46,164 ERROR: Exception on /api/users/1 [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -54,16 +62,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 161, in decorated
-    user = self.authenticate(auth, password)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 366, in authenticate
-    return self.verify_token_callback(token)
-  File "G:\Intercloud\flask\microblog\app\api\auth.py", line 20, in verify_token
-    return User.check_token(token) if token else None
-  File "G:\Intercloud\flask\microblog\app\models.py", line 204, in check_token
-    if(User is None or user.token_expiration < datetime.utcnow()):
-AttributeError: 'NoneType' object has no attribute 'token_expiration'
-2021-08-02 12:34:07,790 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+TypeError: get_user() got an unexpected keyword argument 'id'
+2021-08-01 16:39:57,576 ERROR: Exception on /api/users/2 [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -77,12 +77,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 176, in decorated
-    return f(*args, **kwargs)
-  File "G:\Intercloud\flask\microblog\app\api\tokens.py", line 16, in revoke_token
-    token_auth.current_user.revoke_token()
-AttributeError: 'function' object has no attribute 'revoke_token'
-2021-08-02 12:34:07,790 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+TypeError: get_user() got an unexpected keyword argument 'id'
+2021-08-01 16:39:57,576 ERROR: Exception on /api/users/2 [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -96,14 +92,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 176, in decorated
-    return f(*args, **kwargs)
-  File "G:\Intercloud\flask\microblog\app\api\tokens.py", line 16, in revoke_token
-    token_auth.current_user.revoke_token()
-AttributeError: 'function' object has no attribute 'revoke_token'
-2021-08-02 12:35:06,099 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:99]
-2021-08-02 12:35:06,099 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:99]
-2021-08-02 12:35:27,760 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+TypeError: get_user() got an unexpected keyword argument 'id'
+2021-08-01 16:40:33,803 ERROR: Exception on /api/users/2 [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -117,12 +107,8 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 176, in decorated
-    return f(*args, **kwargs)
-  File "G:\Intercloud\flask\microblog\app\api\tokens.py", line 16, in revoke_token
-    token_auth.current_user().revoke_token()
-AttributeError: 'User' object has no attribute 'revoke_token'
-2021-08-02 12:35:27,760 ERROR: Exception on /api/tokens [DELETE] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
+TypeError: get_user() got an unexpected keyword argument 'id'
+2021-08-01 16:40:33,803 ERROR: Exception on /api/users/2 [GET] [in g:\intercloud\flask\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -136,9 +122,4 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "g:\intercloud\flask\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "g:\intercloud\flask\venv\lib\site-packages\flask_httpauth.py", line 176, in decorated
-    return f(*args, **kwargs)
-  File "G:\Intercloud\flask\microblog\app\api\tokens.py", line 16, in revoke_token
-    token_auth.current_user().revoke_token()
-AttributeError: 'User' object has no attribute 'revoke_token'
-2021-08-02 12:37:05,270 INFO: Microblog startup [in G:\Intercloud\flask\microblog\app\__init__.py:99]
+TypeError: get_user() got an unexpected keyword argument 'id'
